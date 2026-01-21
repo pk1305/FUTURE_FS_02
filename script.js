@@ -316,4 +316,34 @@ function loadProduct() {
     alert("Added to cart");
   };
 }
+// SHOW LOGGED IN USER NAME IN NAVBAR
+document.addEventListener("DOMContentLoaded", () => {
+  const loggedInUser = localStorage.getItem("loggedInUser");
+  const userNameEl = document.getElementById("user-name");
+  const loginLink = document.getElementById("login-link");
+
+  if (loggedInUser && userNameEl) {
+    userNameEl.textContent = "👤 " + loggedInUser;
+    userNameEl.style.fontWeight = "600";
+    userNameEl.style.color = "#7b1fa2";
+  }
+
+  if (loggedInUser && loginLink) {
+    loginLink.style.display = "none";
+  }
+});
+// SHOW LOGGED-IN USER NAME IN NAVBAR
+document.addEventListener("DOMContentLoaded", () => {
+  const username = localStorage.getItem("loggedInUser");
+  const nameSpan = document.getElementById("navbar-username");
+  const loginLink = document.getElementById("login-link");
+
+  if (username && nameSpan) {
+    nameSpan.textContent = "👤 " + username;
+  }
+
+  if (username && loginLink) {
+    loginLink.style.display = "none";
+  }
+});
 
