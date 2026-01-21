@@ -220,5 +220,14 @@ input {
   font-weight: 600;
   text-decoration: none;
 }
+/* Purple text for Login & My Orders */
+.nav-link-purple {
+  color: #7b1fa2 !important;   /* premium purple */
+  font-weight: 600;
+}
+
+.nav-link-purple:hover {
+  color: #4a148c;              /* darker purple on hover */
+}
 
 
