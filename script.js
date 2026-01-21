@@ -367,4 +367,30 @@ function logout() {
   localStorage.removeItem("loggedInUser");
   window.location.reload();
 }
+// NAVBAR LOGIN STATE & LOGOUT (GITHUB SAFE)
+document.addEventListener("DOMContentLoaded", () => {
+  const username = localStorage.getItem("loggedInUser");
+
+  const nameSpan = document.getElementById("navbar-username");
+  const loginLink = document.getElementById("login-link");
+  const logoutLink = document.getElementById("logout-link");
+
+  if (username) {
+    // show username
+    if (nameSpan) nameSpan.textContent = "👤 " + username;
+
+    // hide login
+    if (loginLink) loginLink.style.display = "none";
+
+    // show logout
+    if (logoutLink) logoutLink.style.display = "inline";
+
+    // attach logout click handler
+    logoutLink.addEventListener("click", (e) => {
+      e.preventDefault(); // VERY IMPORTANT
+      localStorage.removeItem("loggedInUser");
+      window.location.reload();
+    });
+  }
+});
 
