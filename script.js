@@ -217,11 +217,12 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-function logout() {
+function logout(event) {
+  if (event) event.preventDefault();
   localStorage.removeItem("loggedInUser");
-  alert("Logged out successfully");
-  window.location.reload();
+  window.location.href = "index.html";
 }
+
 /* CLEAR CART */
 function clearCart() {
   if (cart.length === 0) {
@@ -346,4 +347,24 @@ document.addEventListener("DOMContentLoaded", () => {
     loginLink.style.display = "none";
   }
 });
+// SHOW USERNAME & HANDLE LOGOUT
+document.addEventListener("DOMContentLoaded", () => {
+  const username = localStorage.getItem("loggedInUser");
+
+  const nameSpan = document.getElementById("navbar-username");
+  const loginLink = document.getElementById("login-link");
+  const logoutLink = document.getElementById("logout-link");
+
+  if (username) {
+    if (nameSpan) nameSpan.textContent = "👤 " + username;
+    if (loginLink) loginLink.style.display = "none";
+    if (logoutLink) logoutLink.style.display = "inline";
+  }
+});
+
+// LOGOUT FUNCTION
+function logout() {
+  localStorage.removeItem("loggedInUser");
+  window.location.reload();
+}
 
