@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Zenvy | Premium Store</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-grid">
+  <!-- LEFT -->
+  <div class="nav-left">
+    <h1 class="logo">Zenvy</h1>
+    <a href="login.html">Login</a>
+    <a href="orders.html">My Orders</a>
+  </div>
+
+  <!-- CENTER -->
+  <div class="nav-center">
+    <input
+      type="text"
+      id="searchInput"
+      placeholder="Search premium products..."
+      onkeyup="searchProducts()"
+    >
+  </div>
+
+  <!-- RIGHT -->
+  <div class="nav-right">
+    <a href="cart.html" class="cart-badge">
+      🛒 <span id="cart-count">0</span>
+    </a>
+  </div>
+</nav>
+
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <h2>Elevate Your Lifestyle</h2>
+    <p>Premium gadgets curated for modern living</p>
+  </section>
+
+  <!-- PRODUCTS -->
+  <section class="products premium-products">
+
+    <!-- PRODUCT 1 -->
+    <div class="product-card premium-card" onclick="openProduct(
+      'Wireless Headphones',
+      1999,
+      'images/headphones.jpg',
+      'High quality wireless headphones with noise cancellation and deep bass.'
+    )">
+      <img src="images/headphones.jpg">
+      <h3>Wireless Headphones</h3>
+      <p class="price">₹1999</p>
+      <button onclick="event.stopPropagation(); addToCart('Wireless Headphones',1999)">
+        Add to Cart
+      </button>
+    </div>
+
+    <!-- PRODUCT 2 -->
+    <div class="product-card premium-card" onclick="openProduct(
+      'Smart Watch',
+      2999,
+      'images/smartwatch.jpg',
+      'Smart watch with fitness tracking, heart rate monitor & notifications.'
+    )">
+      <img src="images/smartwatch.jpg">
+      <h3>Smart Watch</h3>
+      <p class="price">₹2999</p>
+      <button onclick="event.stopPropagation(); addToCart('Smart Watch',2999)">
+        Add to Cart
+      </button>
+    </div>
+
+    <!-- PRODUCT 3 -->
+    <div class="product-card premium-card" onclick="openProduct(
+      'Bluetooth Speaker',
+      1499,
+      'images/speaker.jpg',
+      'Portable Bluetooth speaker with immersive sound and long battery life.'
+    )">
+      <img src="images/speaker.jpg">
+      <h3>Bluetooth Speaker</h3>
+      <p class="price">₹1499</p>
+      <button onclick="event.stopPropagation(); addToCart('Bluetooth Speaker',1499)">
+        Add to Cart
+      </button>
+    </div>
+
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>

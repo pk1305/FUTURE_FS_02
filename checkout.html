@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Zenvy | Checkout</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <h1 class="logo">Zenvy</h1>
+    <a href="cart.html">← Back to Cart</a>
+  </nav>
+
+  <div class="page-wrapper">
+    <section class="checkout-container premium-box">
+
+      <div class="checkout-form">
+        <h2>Shipping Details</h2>
+
+        <input type="text" id="name" placeholder="Full Name">
+        <input type="text" id="address" placeholder="Address">
+        <input type="text" id="phone" placeholder="Phone Number">
+
+        <h3>Payment Method</h3>
+
+        <div class="payment-option">
+          <input type="radio" name="payment" value="UPI"> UPI
+        </div>
+        <div class="payment-option">
+          <input type="radio" name="payment" value="Card"> Card
+        </div>
+        <div class="payment-option">
+          <input type="radio" name="payment" value="COD"> Cash on Delivery
+        </div>
+
+        <button onclick="placeOrder()">Place Order</button>
+      </div>
+
+      <div class="order-summary">
+        <h2>Order Summary</h2>
+        <div id="summary"></div>
+        <h3 id="final-total">Total: ₹0</h3>
+      </div>
+
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

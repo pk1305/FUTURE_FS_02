@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Zenvy | Login</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <h1 class="logo">Zenvy</h1>
+    <a href="index.html">← Back</a>
+  </nav>
+
+  <section class="auth-container">
+    <div class="auth-box premium-box">
+
+      <h2 id="form-title">Login</h2>
+
+      <input type="text" id="username" placeholder="Username">
+      <input type="password" id="password" placeholder="Password">
+
+      <button onclick="login()">Login</button>
+
+      <p id="toggle-text">
+        Don’t have an account?
+        <span onclick="showSignup()">Sign up</span>
+      </p>
+
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
